@@ -9,7 +9,7 @@
 <body>
     <div id="test-js-spoof"></div>
     <script>
-
+/*
         let navigator_vars = {
             "navigator.hardwareConcurrency": navigator.hardwareConcurrency,
             // "navigator.connection.effectiveType":navigator.connection.effectiveType,
@@ -41,7 +41,7 @@
             txt += "<i>" + key + "</i>: " + navigator_vars[key] + "<br>";
         };
         txt += '</p><hr>'
-
+*/
         // txt += '<p id="obj"><b><u>OBJECTS</u></b><br>'
         // function serialize(object) {
         //     var type = typeof object;
@@ -156,6 +156,9 @@
         //     txt += "<i>" + key + "</i>: " + navigator_undefined[key] + "<br>";
         // };
         // txt += '</p><hr>'
+        var txt='';
+        txt+=navigator.hardwareConcurrency
+        
         document.getElementById("test-js-spoof").innerHTML = txt;
     </script>
 </body>
