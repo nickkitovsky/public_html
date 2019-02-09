@@ -42,40 +42,40 @@
         txt += '</p><hr>'
         console.log(txt)
     
-            // txt += '<p id="obj"><b><u>OBJECTS</u></b><br>'
-            // function serialize(object) {
-            //     var type = typeof object;
-            //     if (object === null) {
-            //         return '"nullValue"';
-            //     }
-            //     if (type == 'string' || type === 'number' || type === 'boolean') {
-            //         return '"' + object + '"';
-            //     }
-            //     else if (type === 'function') {
-            //         return '"functionValue"';
-            //     }
-            //     else if (type === 'object') {
-            //         var output = '{';
-            //         for (var item in object) {
-            //             try {
-            //                 if (item !== 'enabledPlugin') {
-            //                     output += '"' + item + '":' + serialize(object[item]) + ',';
-            //                 }
-            //             }
-            //             catch (e) {
-            //             }
-            //         }
-            //         return output.replace(/\,$/, '') + '}';
-            //     }
-            //     else if (type === 'undefined') {
-            //         return '"undefinedError"';
-            //     }
-            //     else {
-            //         return '"unknownTypeError"';
-            //     }
-            // };
+            txt += '<p id="obj"><b><u>OBJECTS</u></b><br>'
+            function serialize(object) {
+                var type = typeof object;
+                if (object === null) {
+                    return '"nullValue"';
+                }
+                if (type == 'string' || type === 'number' || type === 'boolean') {
+                    return '"' + object + '"';
+                }
+                else if (type === 'function') {
+                    return '"functionValue"';
+                }
+                else if (type === 'object') {
+                    var output = '{';
+                    for (var item in object) {
+                        try {
+                            if (item !== 'enabledPlugin') {
+                                output += '"' + item + '":' + serialize(object[item]) + ',';
+                            }
+                        }
+                        catch (e) {
+                        }
+                    }
+                    return output.replace(/\,$/, '') + '}';
+                }
+                else if (type === 'undefined') {
+                    return '"undefinedError"';
+                }
+                else {
+                    return '"unknownTypeError"';
+                }
+            };
     
-            // navigator_objects = {
+            navigator_objects = {
             //     "navigator.mediaCapabilities": navigator.mediaCapabilities,
             //     "navigator.credentials": navigator.credentials,
             //     "navigator.clipboard": navigator.clipboard,
@@ -91,17 +91,17 @@
             //     "navigator.presentation": navigator.presentation,
             //     "navigator.bluetooth": navigator.bluetooth,
             //     "navigator.mediaDevices": navigator.mediaDevices,
-            //     "navigator.plugins": navigator.plugins,
+                "navigator.plugins": navigator.plugins,
             //     "navigator.keyboard": navigator.keyboard,
             //     "navigator.permissions": navigator.permissions,
             //     "navigator.usb": navigator.usb,
-            //     "navigator.mimeTypes": navigator.mimeTypes,
+                "navigator.mimeTypes": navigator.mimeTypes
             //     "navigator.locks": navigator.locks
-            // };
-            // for (key in navigator_objects) {
-            //     txt += "<i>" + key + "</i>: " + serialize(navigator_objects[key]) + "<br>";
-            // };
-            // txt += '</p><hr>'
+            };
+            for (key in navigator_objects) {
+                txt += "<i>" + key + "</i>: " + serialize(navigator_objects[key]) + "<br>";
+            };
+            txt += '</p><hr>'
             // navigator_func = {
             //     "navigator.sendBeacon": navigator.sendBeacon,
             //     "navigator.unregisterProtocolHandler": navigator.unregisterProtocolHandler,
