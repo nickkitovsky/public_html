@@ -4,165 +4,167 @@
 <head>
     <meta charset="utf-8" />
     <title>Navigator TEST</title>
-    <script src="3.js"></script>
+    <!-- <script src="3.js"></script> -->
+    <script>
+            /*
+            let navigator_vars = {
+                "navigator.hardwareConcurrency": navigator.hardwareConcurrency,
+                // "navigator.connection.effectiveType":navigator.connection.effectiveType,
+                "navigator.appName": navigator.appName,
+                "navigator.deviceMemory": navigator.deviceMemory,
+                "navigator.cookieEnabled": navigator.cookieEnabled,
+                // "navigator.connection.rtt":navigator.connection.rtt,
+                "navigator.userAgent": navigator.userAgent,
+                "navigator.appCodeName": navigator.appCodeName,
+                "navigator.maxTouchPoints": navigator.maxTouchPoints,
+                // "navigator.connection.saveData":navigator.connection.saveData,
+                "navigator.language": navigator.language,
+                "navigator.vendor": navigator.vendor,
+                "navigator.platform": navigator.platform,
+                "navigator.appVersion": navigator.appVersion,
+                // "navigator.connection.onchange":navigator.connection.onchange,
+                "navigator.onLine": navigator.onLine,
+                "navigator.vendorSub": navigator.vendorSub,
+                "navigator.languages": navigator.languages,
+                // "navigator.connection.downlink":navigator.connection.downlink,
+                "navigator.productSub": navigator.productSub,
+                "navigator.product": navigator.product,
+                "navigator.doNotTrack": navigator.doNotTrack
+            };
+            var txt = "";
+            txt += '<p id="var"><b><u>VARS</u></b><br>'
+    
+            for (key in navigator_vars) {
+                txt += "<i>" + key + "</i>: " + navigator_vars[key] + "<br>";
+            };
+            txt += '</p><hr>'
+    */
+            // txt += '<p id="obj"><b><u>OBJECTS</u></b><br>'
+            // function serialize(object) {
+            //     var type = typeof object;
+            //     if (object === null) {
+            //         return '"nullValue"';
+            //     }
+            //     if (type == 'string' || type === 'number' || type === 'boolean') {
+            //         return '"' + object + '"';
+            //     }
+            //     else if (type === 'function') {
+            //         return '"functionValue"';
+            //     }
+            //     else if (type === 'object') {
+            //         var output = '{';
+            //         for (var item in object) {
+            //             try {
+            //                 if (item !== 'enabledPlugin') {
+            //                     output += '"' + item + '":' + serialize(object[item]) + ',';
+            //                 }
+            //             }
+            //             catch (e) {
+            //             }
+            //         }
+            //         return output.replace(/\,$/, '') + '}';
+            //     }
+            //     else if (type === 'undefined') {
+            //         return '"undefinedError"';
+            //     }
+            //     else {
+            //         return '"unknownTypeError"';
+            //     }
+            // };
+    
+            // navigator_objects = {
+            //     "navigator.mediaCapabilities": navigator.mediaCapabilities,
+            //     "navigator.credentials": navigator.credentials,
+            //     "navigator.clipboard": navigator.clipboard,
+            //     "navigator.storage": navigator.storage,
+            //     "navigator.connection": navigator.connection,
+            //     "navigator.webkitPersistentStorage": navigator.webkitPersistentStorage,
+            //     "navigator.geolocation": navigator.geolocation,
+            //     "navigator.webkitTemporaryStorage": navigator.webkitTemporaryStorage,
+            //     "navigator.serviceWorker": navigator.serviceWorker,
+            //     "navigator.loadPurpose": navigator.loadPurpose,
+            //     "navigator.appMinorVersion": navigator.appMinorVersion,
+            //     "navigator.fido": navigator.fido,
+            //     "navigator.presentation": navigator.presentation,
+            //     "navigator.bluetooth": navigator.bluetooth,
+            //     "navigator.mediaDevices": navigator.mediaDevices,
+            //     "navigator.plugins": navigator.plugins,
+            //     "navigator.keyboard": navigator.keyboard,
+            //     "navigator.permissions": navigator.permissions,
+            //     "navigator.usb": navigator.usb,
+            //     "navigator.mimeTypes": navigator.mimeTypes,
+            //     "navigator.locks": navigator.locks
+            // };
+            // for (key in navigator_objects) {
+            //     txt += "<i>" + key + "</i>: " + serialize(navigator_objects[key]) + "<br>";
+            // };
+            // txt += '</p><hr>'
+            // navigator_func = {
+            //     "navigator.sendBeacon": navigator.sendBeacon,
+            //     "navigator.unregisterProtocolHandler": navigator.unregisterProtocolHandler,
+            //     "navigator.requestMIDIAccess": navigator.requestMIDIAccess,
+            //     "navigator.registerProtocolHandler": navigator.registerProtocolHandler,
+            //     "navigator.getGamepads": navigator.getGamepads,
+            //     "navigator.webkitGetUserMedia": navigator.webkitGetUserMedia,
+            //     "navigator.getBattery": navigator.getBattery,
+            //     "navigator.getUserMedia": navigator.getUserMedia,
+            //     "navigator.vibrate": navigator.vibrate,
+            //     "navigator.requestMediaKeySystemAccess": navigator.requestMediaKeySystemAccess,
+            //     "navigator.javaEnabled": navigator.javaEnabled
+            // }
+            // txt += '<p id="functions"><b><u>FUNCTIONS</u></b><br>'
+    
+            // for (key in navigator_func) {
+            //     txt += "<i>" + key + "</i>: " + navigator_func[key] + "<br>";
+            // };
+            // txt += '</p><hr>'
+            // navigator_undefined = {
+            //     "navigator.browserSpecs": navigator.browserSpecs,
+            //     "navigator.version": navigator.version,
+            //     "navigator.enumerateDevices": navigator.enumerateDevices,
+            //     "navigator.webkitGetGamepads": navigator.webkitGetGamepads,
+            //     "navigator.cpuClass": navigator.cpuClass,
+            //     "navigator.En": navigator.En,
+            //     "navigator.connection.downlinkMax": navigator.connection.downlinkMax,
+            //     "navigator.getBattery.chargingTime": navigator.getBattery.chargingTime,
+            //     "navigator.browserLanguage": navigator.browserLanguage,
+            //     "navigator.systemLanguage": navigator.systemLanguage,
+            //     "navigator.userLanguage": navigator.userLanguage,
+            //     "navigator.standalone": navigator.standalone,
+            //     "navigator.jg": navigator.jg,
+            //     "navigator.pointerEnabled": navigator.pointerEnabled,
+            //     "navigator.getBattery.level": navigator.getBattery.level,
+            //     "navigator.uaf": navigator.uaf,
+            //     "navigator.ai": navigator.ai,
+            //     "navigator.share": navigator.share,
+            //     "navigator.getBattery.charging": navigator.getBattery.charging,
+            //     "navigator.webdriver": navigator.webdriver,
+            //     "navigator.msPointerEnabled": navigator.msPointerEnabled,
+            //     "navigator.connection.type": navigator.connection.type,
+            //     "navigator.taintEnabled": navigator.taintEnabled,
+            //     "navigator.getBattery.dischargingTime": navigator.getBattery.dischargingTime,
+            //     "navigator.buildID": navigator.buildID,
+            //     "navigator.oscpu": navigator.oscpu,
+            //     "navigator.msMaxTouchPoints": navigator.msMaxTouchPoints
+            // }
+            // txt += '<p><b><u>UNDEFINED</u></b><br>'
+    
+            // for (key in navigator_undefined) {
+            //     txt += "<i>" + key + "</i>: " + navigator_undefined[key] + "<br>";
+            // };
+            // txt += '</p><hr>'
+            var txt='';
+            txt+=navigator.hardwareConcurrency;
+            console.log(txt)
+            document.getElementById("test-js-spoof").innerHTML = txt;
+        </script>
+        
 </head>
 
 <body>
     <div id="test-js-spoof"></div>
     
-    <script>
-        /*
-        let navigator_vars = {
-            "navigator.hardwareConcurrency": navigator.hardwareConcurrency,
-            // "navigator.connection.effectiveType":navigator.connection.effectiveType,
-            "navigator.appName": navigator.appName,
-            "navigator.deviceMemory": navigator.deviceMemory,
-            "navigator.cookieEnabled": navigator.cookieEnabled,
-            // "navigator.connection.rtt":navigator.connection.rtt,
-            "navigator.userAgent": navigator.userAgent,
-            "navigator.appCodeName": navigator.appCodeName,
-            "navigator.maxTouchPoints": navigator.maxTouchPoints,
-            // "navigator.connection.saveData":navigator.connection.saveData,
-            "navigator.language": navigator.language,
-            "navigator.vendor": navigator.vendor,
-            "navigator.platform": navigator.platform,
-            "navigator.appVersion": navigator.appVersion,
-            // "navigator.connection.onchange":navigator.connection.onchange,
-            "navigator.onLine": navigator.onLine,
-            "navigator.vendorSub": navigator.vendorSub,
-            "navigator.languages": navigator.languages,
-            // "navigator.connection.downlink":navigator.connection.downlink,
-            "navigator.productSub": navigator.productSub,
-            "navigator.product": navigator.product,
-            "navigator.doNotTrack": navigator.doNotTrack
-        };
-        var txt = "";
-        txt += '<p id="var"><b><u>VARS</u></b><br>'
 
-        for (key in navigator_vars) {
-            txt += "<i>" + key + "</i>: " + navigator_vars[key] + "<br>";
-        };
-        txt += '</p><hr>'
-*/
-        // txt += '<p id="obj"><b><u>OBJECTS</u></b><br>'
-        // function serialize(object) {
-        //     var type = typeof object;
-        //     if (object === null) {
-        //         return '"nullValue"';
-        //     }
-        //     if (type == 'string' || type === 'number' || type === 'boolean') {
-        //         return '"' + object + '"';
-        //     }
-        //     else if (type === 'function') {
-        //         return '"functionValue"';
-        //     }
-        //     else if (type === 'object') {
-        //         var output = '{';
-        //         for (var item in object) {
-        //             try {
-        //                 if (item !== 'enabledPlugin') {
-        //                     output += '"' + item + '":' + serialize(object[item]) + ',';
-        //                 }
-        //             }
-        //             catch (e) {
-        //             }
-        //         }
-        //         return output.replace(/\,$/, '') + '}';
-        //     }
-        //     else if (type === 'undefined') {
-        //         return '"undefinedError"';
-        //     }
-        //     else {
-        //         return '"unknownTypeError"';
-        //     }
-        // };
-
-        // navigator_objects = {
-        //     "navigator.mediaCapabilities": navigator.mediaCapabilities,
-        //     "navigator.credentials": navigator.credentials,
-        //     "navigator.clipboard": navigator.clipboard,
-        //     "navigator.storage": navigator.storage,
-        //     "navigator.connection": navigator.connection,
-        //     "navigator.webkitPersistentStorage": navigator.webkitPersistentStorage,
-        //     "navigator.geolocation": navigator.geolocation,
-        //     "navigator.webkitTemporaryStorage": navigator.webkitTemporaryStorage,
-        //     "navigator.serviceWorker": navigator.serviceWorker,
-        //     "navigator.loadPurpose": navigator.loadPurpose,
-        //     "navigator.appMinorVersion": navigator.appMinorVersion,
-        //     "navigator.fido": navigator.fido,
-        //     "navigator.presentation": navigator.presentation,
-        //     "navigator.bluetooth": navigator.bluetooth,
-        //     "navigator.mediaDevices": navigator.mediaDevices,
-        //     "navigator.plugins": navigator.plugins,
-        //     "navigator.keyboard": navigator.keyboard,
-        //     "navigator.permissions": navigator.permissions,
-        //     "navigator.usb": navigator.usb,
-        //     "navigator.mimeTypes": navigator.mimeTypes,
-        //     "navigator.locks": navigator.locks
-        // };
-        // for (key in navigator_objects) {
-        //     txt += "<i>" + key + "</i>: " + serialize(navigator_objects[key]) + "<br>";
-        // };
-        // txt += '</p><hr>'
-        // navigator_func = {
-        //     "navigator.sendBeacon": navigator.sendBeacon,
-        //     "navigator.unregisterProtocolHandler": navigator.unregisterProtocolHandler,
-        //     "navigator.requestMIDIAccess": navigator.requestMIDIAccess,
-        //     "navigator.registerProtocolHandler": navigator.registerProtocolHandler,
-        //     "navigator.getGamepads": navigator.getGamepads,
-        //     "navigator.webkitGetUserMedia": navigator.webkitGetUserMedia,
-        //     "navigator.getBattery": navigator.getBattery,
-        //     "navigator.getUserMedia": navigator.getUserMedia,
-        //     "navigator.vibrate": navigator.vibrate,
-        //     "navigator.requestMediaKeySystemAccess": navigator.requestMediaKeySystemAccess,
-        //     "navigator.javaEnabled": navigator.javaEnabled
-        // }
-        // txt += '<p id="functions"><b><u>FUNCTIONS</u></b><br>'
-
-        // for (key in navigator_func) {
-        //     txt += "<i>" + key + "</i>: " + navigator_func[key] + "<br>";
-        // };
-        // txt += '</p><hr>'
-        // navigator_undefined = {
-        //     "navigator.browserSpecs": navigator.browserSpecs,
-        //     "navigator.version": navigator.version,
-        //     "navigator.enumerateDevices": navigator.enumerateDevices,
-        //     "navigator.webkitGetGamepads": navigator.webkitGetGamepads,
-        //     "navigator.cpuClass": navigator.cpuClass,
-        //     "navigator.En": navigator.En,
-        //     "navigator.connection.downlinkMax": navigator.connection.downlinkMax,
-        //     "navigator.getBattery.chargingTime": navigator.getBattery.chargingTime,
-        //     "navigator.browserLanguage": navigator.browserLanguage,
-        //     "navigator.systemLanguage": navigator.systemLanguage,
-        //     "navigator.userLanguage": navigator.userLanguage,
-        //     "navigator.standalone": navigator.standalone,
-        //     "navigator.jg": navigator.jg,
-        //     "navigator.pointerEnabled": navigator.pointerEnabled,
-        //     "navigator.getBattery.level": navigator.getBattery.level,
-        //     "navigator.uaf": navigator.uaf,
-        //     "navigator.ai": navigator.ai,
-        //     "navigator.share": navigator.share,
-        //     "navigator.getBattery.charging": navigator.getBattery.charging,
-        //     "navigator.webdriver": navigator.webdriver,
-        //     "navigator.msPointerEnabled": navigator.msPointerEnabled,
-        //     "navigator.connection.type": navigator.connection.type,
-        //     "navigator.taintEnabled": navigator.taintEnabled,
-        //     "navigator.getBattery.dischargingTime": navigator.getBattery.dischargingTime,
-        //     "navigator.buildID": navigator.buildID,
-        //     "navigator.oscpu": navigator.oscpu,
-        //     "navigator.msMaxTouchPoints": navigator.msMaxTouchPoints
-        // }
-        // txt += '<p><b><u>UNDEFINED</u></b><br>'
-
-        // for (key in navigator_undefined) {
-        //     txt += "<i>" + key + "</i>: " + navigator_undefined[key] + "<br>";
-        // };
-        // txt += '</p><hr>'
-        // var txt='';
-        // txt+=navigator.hardwareConcurrency;
-
-        // document.getElementById("test-js-spoof").innerHTML = txt;
-    </script>
 </body>
 
 </html>
