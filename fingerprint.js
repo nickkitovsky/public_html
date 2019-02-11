@@ -379,7 +379,12 @@ const textarea = document.getElementById('result');
 // give it 5sec for everyting to settle
 setTimeout(() => {
     const resultString = JSON.stringify(data, null, 2);
-    document.getElementById("res").innerHTML = resultString;
+    // document.getElementById("start")
+    let start=getElementById('start')
+    let final = document.createElement('div');
+    final.id = 'finish';
+    document.getElementById("finish").innerHTML = resultString;
+    start.appendChild(final);
     // const blobURL = window.URL.createObjectURL(new Blob([resultString], {type: 'text/json'}));
 
     // link.setAttribute('href', blobURL);
