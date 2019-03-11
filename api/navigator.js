@@ -11,25 +11,15 @@ const data = {
             platform: navigator.platform,
             doNotTrack: navigator.doNotTrack,
             hardwareConcurrency: navigator.hardwareConcurrency,//not in wk but there is a pollyfil
-            maxTouchPoints: navigator.maxTouchPoints,//not in wk, covered by getTouchSupport
-            mediaCapabilities: navigator.mediaCapabilities,//not in wk
-            mediaDevices: null,//async
+            maxTouchPoints: navigator.maxTouchPoints,//not in wk, covered by getTouchSupport    
             deviceMemory: navigator.deviceMemory,//not in wk
-            connection: navigator.connection,//not in wk
             onLine: navigator.onLine,
-            keyboard: navigator.keyboard,//not in wk
             nfc: navigator.nfc,//not in wk
-            permissions: navigator.permissions,// probably can't be used in this case, not in wk
-            presentation: navigator.presentation,// not in wk
             product: navigator.product,
             productSub: navigator.productSub,
-            storage: navigator.storage,//not in wk
             vendor: navigator.vendor,
             vendorSub: navigator.vendorSub,
             xr: navigator.xr,//not in wk
-            webkitPersistentStorage: navigator.webkitPersistentStorage,//not in wk
-            webkitTemporaryStorage: navigator.webkitTemporaryStorage,//not in wk
-            getBattery: navigator.getBattery,//not in wk
             getInstalledRelatedApps: navigator.getInstalledRelatedApps,//not in wk
             getVRDisplays: navigator.getVRDisplays //not in wk
         },
@@ -66,10 +56,19 @@ const data = {
             getGamepads: getGamepads(),//async
             mimeTypes: getMimeTypes(),
             plugins: getRegularPlugins(),
-            connection: getConnection()
+            connection: getConnection(),
+            mediaCapabilities: navigator.mediaCapabilities,//not in wk
+            mediaDevices: null,//async
+            keyboard: navigator.keyboard,//not in wk
+            permissions: navigator.permissions,// probably can't be used in this case, not in wk
+            presentation: navigator.presentation,// not in wk
+            storage: navigator.storage,//not in wk
+            webkitPersistentStorage: navigator.webkitPersistentStorage,//not in wk
+            webkitTemporaryStorage: navigator.webkitTemporaryStorage,//not in wk
         },
         func: {
-            javaEnabled: navigator.javaEnabled()
+            javaEnabled: navigator.javaEnabled(),
+            getBattery: navigator.getBattery()//not in wk
         }
     },
     screen: {
